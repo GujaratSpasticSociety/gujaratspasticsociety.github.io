@@ -11,10 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
         body {
-            background-image: url('https://source.unsplash.com/random');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #f0f0f0; /* Light Grey Background Color */
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin-right: 10px;
+            color: #333; /* Dark Grey Color */
         }
     </style>
     <!-- Schema Markup -->
@@ -39,12 +43,6 @@
 </head>
 <body class="is-preload">
     <div id="wrapper">
-        <!-- Navigation -->
-        <nav id="nav">
-            <a href="#" class="btn-floating waves-effect waves-light grey"><i class="material-icons">home</i></a>
-            <a href="#work" class="btn-floating waves-effect waves-light grey"><i class="material-icons">folder</i></a>
-            <a href="mailto:ranjanisastry@gmail.com" class="btn-floating waves-effect waves-light grey"><i class="material-icons">email</i></a>
-        </nav>
 
         <div id="main">
             <!-- Home Section -->
@@ -76,13 +74,19 @@
                     </div>
                 </section>
             </article>
+
+            <!-- Social Media Section -->
+            <div class="social-icons">
+                <a href="https://twitter.com/ranjanisastry" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ranjanisastry" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/ranjanisastry" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
 
         <!-- Footer -->
         <footer id="footer">
             <ul class="copyright">
                 <li>&copy; Ranjani Sastry</li>
-               
             </ul>
         </footer>
     </div>
