@@ -12,12 +12,51 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #main {
+            flex-grow: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
         .social-icons {
             margin-top: 20px;
+            font-size: 24px;
         }
+
         .social-icons a {
             margin-right: 10px;
             color: #333; /* Dark Grey Color */
+        }
+
+        #footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #footer .copyright {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #footer .copyright li {
+            display: inline;
+            margin-right: 10px;
         }
     </style>
     <!-- Schema Markup -->
@@ -41,9 +80,9 @@
     </script>
 </head>
 <body class="is-preload">
-    <div id="wrapper" style="background-color: #f0f0f0;"> <!-- Default Background Color -->
+    <div id="wrapper">
+        <!-- Home Section -->
         <div id="main">
-            <!-- Home Section -->
             <article id="home" class="panel intro">
                 <header>
                     <h1>Ranjani Sastry</h1>
@@ -72,13 +111,6 @@
                     </div>
                 </section>
             </article>
-
-            <!-- Social Media Section -->
-            <div class="social-icons">
-                <a href="https://twitter.com/ranjanisastry" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/ranjanisastry" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/ranjanisastry" target="_blank"><i class="fab fa-facebook"></i></a>
-            </div>
         </div>
 
         <!-- Footer -->
@@ -86,24 +118,15 @@
             <ul class="copyright">
                 <li>&copy; Ranjani Sastry</li>
             </ul>
+            <div class="social-icons">
+                <a href="https://twitter.com/ranjanisastry" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ranjanisastry" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/ranjanisastry" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </footer>
     </div>
 
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        // Generate a random color and apply it to the background
-        function randomBackgroundColor() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            document.getElementById('wrapper').style.backgroundColor = color;
-        }
-
-        // Call the function to set the initial random background color
-        randomBackgroundColor();
-    </script>
 </body>
 </html>
