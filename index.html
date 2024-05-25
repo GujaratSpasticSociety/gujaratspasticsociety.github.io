@@ -17,6 +17,8 @@
             padding: 0;
             height: 100%;
             font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0; /* Default background color */
+            transition: background-color 0.5s ease; /* Transition effect */
         }
 
         #wrapper {
@@ -126,7 +128,22 @@
         </footer>
     </div>
 
+    <!-- Background Audio -->
+    <audio autoplay loop>
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Change background color on page load
+        window.onload = function() {
+            var colors = ["#f0f0f0", "#e6e6e6", "#cccccc"]; // Array of background colors
+            var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Select a random color
+            document.body.style.backgroundColor = randomColor; // Apply the random color to the body background
+        };
+    </script>
 </body>
 </html>
