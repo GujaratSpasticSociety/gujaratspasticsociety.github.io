@@ -9,10 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body {
-            background-color: #f0f0f0; /* Light Grey Background Color */
-        }
         .social-icons {
             margin-top: 20px;
         }
@@ -42,8 +41,7 @@
     </script>
 </head>
 <body class="is-preload">
-    <div id="wrapper">
-
+    <div id="wrapper" style="background-color: #f0f0f0;"> <!-- Default Background Color -->
         <div id="main">
             <!-- Home Section -->
             <article id="home" class="panel intro">
@@ -93,5 +91,19 @@
 
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Generate a random color and apply it to the background
+        function randomBackgroundColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            document.getElementById('wrapper').style.backgroundColor = color;
+        }
+
+        // Call the function to set the initial random background color
+        randomBackgroundColor();
+    </script>
 </body>
 </html>
