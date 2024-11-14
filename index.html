@@ -48,7 +48,7 @@
             z-index: 1000;
         }
 
-        /* Adjusting nav-wrapper to make logo and nav items align */
+        /* Adjusting nav-wrapper for better alignment */
         .nav-wrapper {
             display: flex;
             justify-content: space-between; /* Ensures logo and nav items are spaced out */
@@ -66,21 +66,22 @@
         }
 
         .brand-logo img {
-            width: 80px !important; /* Resize the logo */
-            height: auto !important;
-            margin-right: 10px !important; /* Space between logo and text */
-            transform: scale(1.2); /* Zoom effect */
-            transition: transform 0.3s ease !important; /* Smooth zoom effect */
+            width: 60px; /* Adjust the width of the logo */
+            height: auto; /* Maintain the aspect ratio */
+            margin-right: 10px; /* Space between logo and text */
+            transform: scale(1.1); /* Zoom effect */
+            transition: transform 0.3s ease; /* Smooth zoom effect */
         }
 
         .brand-logo:hover img {
-            transform: scale(1.3) !important; /* Zoom in more on hover */
+            transform: scale(1.2); /* Zoom in more on hover */
         }
 
         /* Navigation links aligned to the right */
         .right {
             display: flex;
             justify-content: flex-end; /* Align items to the right */
+            align-items: center;
         }
 
         .right li {
