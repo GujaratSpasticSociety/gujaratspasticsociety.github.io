@@ -4,48 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gujarat Spastic Society - Supporting persons with disabilities and their families.">
-    <meta name="keywords" content="Gujarat Spastic Society, disabilities, cerebral palsy, rehabilitation, support services">
-    <meta property="og:title" content="Gujarat Spastic Society">
-    <meta property="og:description" content="We are committed to improving the lives of persons with disabilities and supporting their families.">
-    <meta property="og:image" content="https://example.com/og-image.jpg">
-    <meta property="og:url" content="https://www.gujaratspasticsociety.org">
     <title>Gujarat Spastic Society</title>
 
     <!-- Materialize CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
     <!-- Font Awesome for Social Media Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <!-- jQuery and Materialize JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
-
     <style>
-        /* General body styles */
+        :root {
+            --primary-color: #7b1fa2;
+            --secondary-color: #9c4dcc;
+        }
+
         body {
-            background-color: #7b1fa2; /* Dark Purple Background */
-            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: var(--primary-color);
+            color: white;
         }
 
-        /* Navbar Styling */
         header {
-            background-color: #7b1fa2 !important;
+            background-color: var(--primary-color) !important;
         }
 
         nav {
-            background-color: #7b1fa2 !important; /* Dark Purple */
+            background-color: var(--primary-color) !important;
         }
 
         nav a {
             color: white !important;
         }
 
-        /* Navbar Positioning */
         .navbar-fixed {
             position: fixed;
             top: 0;
@@ -53,38 +45,29 @@
             z-index: 1000;
         }
 
-        /* Align the logo */
         .nav-wrapper {
             padding: 0 20px;
             display: flex;
-            align-items: center; /* Vertically align navbar items */
+            align-items: center;
             justify-content: space-between;
         }
 
-        /* Brand logo (adjust the height/width if needed) */
         .brand-logo img {
-            width: 50px; /* Logo size */
+            width: 50px;
             height: auto;
             object-fit: contain;
             margin-right: 10px;
         }
 
-        .brand-logo {
-            display: flex;
-            align-items: center;
-        }
-
-        /* Navbar items on the right */
         .nav-wrapper .right {
             display: flex;
             justify-content: flex-end;
         }
 
         .nav-wrapper .right li {
-            margin-left: 20px; /* Space between navigation items */
+            margin-left: 20px;
         }
 
-        /* Section Padding and Heading Styles */
         .section {
             padding: 60px 20px;
         }
@@ -102,7 +85,6 @@
             padding-right: 20px;
         }
 
-        /* Social Icons */
         .social-icons a {
             margin: 10px;
             font-size: 30px;
@@ -114,7 +96,7 @@
         }
 
         footer {
-            background-color: #7b1fa2 !important;
+            background-color: var(--primary-color) !important;
             color: white;
         }
 
@@ -122,9 +104,25 @@
             color: white;
         }
 
-        /* Content Below Navbar */
         .content {
-            margin-top: 100px; /* Prevent overlap from navbar */
+            margin-top: 100px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .brand-logo img {
+                width: 40px;
+                height: auto;
+            }
+
+            .nav-wrapper .right {
+                display: block;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -138,10 +136,9 @@
                 <div class="nav-wrapper">
                     <!-- Logo with Image -->
                     <a href="#home" class="brand-logo">
-                        <img src="/assets/gss.jpg" alt="Gujarat Spastic Society Logo"> <!-- Correct path for your logo -->
+                        <img src="/assets/gss.jpg" alt="Gujarat Spastic Society Logo">
                         Gujarat Spastic Society
                     </a>
-
                     <!-- Navigation Links on the Right -->
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="#home">Home</a></li>
@@ -161,14 +158,14 @@
         </div>
     </section>
 
-    <section id="about-us" class="section">
+    <section id="about-us" class="section content">
         <div class="container">
             <h2>About Us</h2>
             <p>The Gujarat Spastic Society was established in 1988 with the mission of helping children and adults with disabilities, primarily focusing on individuals with cerebral palsy and related disabilities. Our goal is to promote inclusivity and provide families with the tools and support they need.</p>
         </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="services" class="section content">
         <div class="container">
             <h2>Programs & Services</h2>
             <ul class="programs-list">
@@ -182,7 +179,7 @@
     </section>
 
     <!-- Social Media Section -->
-    <section id="social-media" class="section">
+    <section id="social-media" class="section content">
         <div class="container center-align">
             <h2>Follow Us</h2>
             <p>Stay connected with us on social media to stay updated on our activities and events!</p>
@@ -212,6 +209,8 @@
     </footer>
 
     <!-- Initialize Materialize Components -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             M.AutoInit();  // Initializes all materialize components (like dropdowns, modals, etc.)
