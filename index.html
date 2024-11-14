@@ -12,27 +12,27 @@
     <meta property="og:url" content="https://www.gujaratspasticsociety.org">
     <title>Gujarat Spastic Society</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <!-- Materialize CSS -->
     <link href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css" rel="stylesheet">
 
     <!-- Font Awesome for Social Media Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <!-- jQuery and Materialize JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
 
     <style>
+        /* General body styles */
         body {
-            background-color: #7b1fa2;
+            background-color: #7b1fa2; /* Dark Purple Background */
             color: white;
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
+        /* Navbar styling */
         header, nav {
             background-color: #7b1fa2 !important;
         }
@@ -48,19 +48,26 @@
             z-index: 1000;
         }
 
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        /* Brand Logo and Text Styling */
         .brand-logo {
-            font-size: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100%; /* Ensures it fills the navbar height */
+            font-size: 24px;
         }
 
         .brand-logo img {
-            width: 100px; /* Resize the logo */
+            width: 80px; /* Resize the logo */
             height: auto;
             margin-right: 10px; /* Space between logo and text */
-            transform: scale(1.2); /* Slightly zoomed in */
+            transform: scale(1.2); /* Slight zoom effect */
             transition: transform 0.3s ease; /* Smooth zoom effect */
         }
 
@@ -73,6 +80,7 @@
             justify-content: flex-end;
         }
 
+        /* Section padding and heading styles */
         .section {
             padding: 60px 20px;
         }
@@ -105,41 +113,34 @@
             color: white;
         }
 
-        .content {
-            margin-top: 100px;
-        }
-
-        .programs-list li {
-            background-color: #9c4dcc;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 4px;
-            font-size: 18px;
+        footer p {
             color: white;
         }
 
-        .programs-list li:hover {
-            background-color: #7b1fa2;
+        .center-align {
+            text-align: center !important;
         }
 
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transition: background-color 0.3s ease;
+        /* Adjust content below navbar */
+        .content {
+            margin-top: 100px; /* Prevent navbar overlap */
         }
     </style>
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <header>
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
                     <!-- Logo with Image -->
                     <a href="#home" class="brand-logo">
-                        <img src="/assets/gss.jpg" alt="Gujarat Spastic Society Logo">
+                        <img src="/assets/gss.jpg?v=1" alt="Gujarat Spastic Society Logo">  <!-- Added ?v=1 to force reload -->
                         Gujarat Spastic Society
                     </a>
+
                     <!-- Navigation Links -->
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="#home">Home</a></li>
