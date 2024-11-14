@@ -15,40 +15,56 @@
     <!-- Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome for Social Media Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
+        /* Root Variables */
         :root {
             --primary-color: #7b1fa2;
             --secondary-color: #9c4dcc;
+            --text-color: white;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--primary-color);
-            color: white;
+        /* Global Font Settings */
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: 'Roboto', sans-serif; /* Use Roboto font for all text */
+            color: var(--text-color);
+            background-color: var(--primary-color);
         }
 
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700; /* Bold weight for headings */
+        }
+
+        p, ul, li, a {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400; /* Normal weight for paragraphs and list items */
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Navbar Styling */
         header {
             background-color: var(--primary-color);
         }
 
         nav {
             background-color: var(--primary-color);
-        }
-
-        .brand-logo img {
-            width: 50px;
-            height: auto;
-            margin-right: 15px;
-        }
-
-        .brand-logo {
-            display: flex;
-            align-items: center;
         }
 
         .navbar-fixed {
@@ -60,34 +76,51 @@
 
         .nav-wrapper {
             padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .right {
+        .brand-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .nav-wrapper .right {
             display: flex;
             justify-content: flex-end;
         }
 
-        .right li {
+        .nav-wrapper .right li {
             margin-left: 20px;
         }
 
+        /* Section Padding */
         .section {
             padding: 60px 20px;
         }
 
-        h2 {
+        /* Heading Styles */
+        h1, h2 {
+            text-align: center;
             font-size: 36px;
             font-weight: bold;
-            color: white;
-            text-align: center;
-            margin-bottom: 20px;
+            color: var(--text-color);
         }
 
+        /* Container Padding */
         .container {
             padding-left: 20px;
             padding-right: 20px;
         }
 
+        /* Footer Styles */
         footer {
             background-color: var(--primary-color) !important;
             color: white;
@@ -98,8 +131,32 @@
             text-align: center;
         }
 
+        /* Content Spacing */
         .content {
             margin-top: 100px;
+        }
+
+        /* Programs Section */
+        #services .programs-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #services .programs-list li {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        #services .programs-list li::before {
+            content: '\2022'; /* Bullet Point */
+            color: var(--secondary-color);
+            font-size: 25px;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         /* Social Media Icons */
@@ -213,22 +270,19 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
+        <div class="container center-align">
             <p>&copy; 2024 Gujarat Spastic Society. All rights reserved.</p>
             <p><a href="privacy-policy.html" class="white-text">Privacy Policy</a> | <a href="terms-conditions.html" class="white-text">Terms & Conditions</a></p>
         </div>
     </footer>
 
-    <!-- Materialize JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            M.AutoInit();  // Initializes all Materialize components (like dropdowns, modals, etc.)
+            M.AutoInit();  // Initializes Materialize components
         });
     </script>
-
 </body>
 
 </html>
