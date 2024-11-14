@@ -32,8 +32,12 @@
             padding: 0;
         }
 
-        /* Navbar styling */
-        header, nav {
+        /* Navbar Styling */
+        header {
+            background-color: #7b1fa2 !important; /* Dark Purple for navbar */
+        }
+
+        nav {
             background-color: #7b1fa2 !important; /* Dark Purple */
         }
 
@@ -41,7 +45,7 @@
             color: white !important;
         }
 
-        /* Navbar fixed position and behavior */
+        /* Fix Navbar layout */
         .navbar-fixed {
             position: fixed;
             top: 0;
@@ -49,49 +53,43 @@
             z-index: 1000;
         }
 
-        /* Adjusting nav-wrapper for better alignment */
+        /* Flexbox for nav-wrapper to align logo and links */
         .nav-wrapper {
             display: flex;
-            justify-content: space-between; /* Ensures logo and nav items are spaced out */
-            align-items: center; /* Vertically center items */
-            height: 80px; /* Fixed height for navbar */
-            padding: 0 20px; /* Padding for left and right */
+            align-items: center; /* Vertically center logo */
+            justify-content: space-between; /* Push logo to the left and links to the right */
+            padding: 0 20px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
         }
 
         /* Logo Styling */
-        .brand-logo {
-            display: flex;
-            align-items: center; /* Vertically center logo and text */
-            font-size: 24px !important;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        /* Adjust the logo size and behavior */
         .brand-logo img {
-            width: 50px !important; /* Adjust the width of the logo */
-            height: auto !important; /* Maintain aspect ratio */
-            margin-right: 10px; /* Space between logo and text */
-            transform: scale(1.1);
-            transition: transform 0.3s ease; /* Smooth zoom effect */
+            width: 50px;
+            height: auto;
+            margin-right: 15px; /* Space between logo and text */
+            transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
         }
 
         .brand-logo:hover img {
-            transform: scale(1.15); /* Slight zoom effect on hover */
+            transform: scale(1.1); /* Slight zoom effect */
         }
 
-        /* Navigation items aligned to the right */
         .right {
             display: flex;
             justify-content: flex-end; /* Align items to the right */
-            align-items: center; /* Vertically align items */
+            align-items: center;
         }
 
         .right li {
-            margin-left: 20px; /* Space between items */
+            margin-left: 20px; /* Space between links */
         }
 
-        /* Section padding and heading styles */
+        /* Section Padding and Heading Styles */
         .section {
             padding: 60px 20px;
         }
@@ -109,6 +107,7 @@
             padding-right: 20px;
         }
 
+        /* Social Icons */
         .social-icons a {
             margin: 10px;
             font-size: 30px;
@@ -128,15 +127,10 @@
             color: white;
         }
 
-        .center-align {
-            text-align: center !important;
-        }
-
-        /* Adjust content below navbar */
+        /* Content Below Navbar */
         .content {
-            margin-top: 100px; /* Prevent navbar overlap */
+            margin-top: 100px; /* Prevent overlap from navbar */
         }
-
     </style>
 </head>
 
@@ -149,11 +143,11 @@
                 <div class="nav-wrapper">
                     <!-- Logo with Image -->
                     <a href="#home" class="brand-logo">
-                        <img src="/assets/gss.jpg?v=1" alt="Gujarat Spastic Society Logo">
+                        <img src="/assets/gss.jpg?v=1" alt="Gujarat Spastic Society Logo"> <!-- Correct path for your logo -->
                         Gujarat Spastic Society
                     </a>
 
-                    <!-- Navigation Links -->
+                    <!-- Navigation Links on the Right -->
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about-us">About Us</a></li>
