@@ -50,7 +50,7 @@
 
         .nav-wrapper {
             display: flex;
-            justify-content: space-between; /* To keep logo and nav links apart */
+            justify-content: space-between; /* Ensure space between logo and nav items */
             align-items: center; /* Vertically center content */
             padding: 0 20px; /* Add padding to avoid sticking to edges */
         }
@@ -60,6 +60,7 @@
             display: flex;
             align-items: center;  /* Center logo and text vertically */
             font-size: 24px;
+            flex-grow: 0;  /* Ensure the logo doesn't take up extra space */
         }
 
         .brand-logo img {
@@ -76,7 +77,8 @@
 
         .right {
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-end; /* Push nav items to the right */
+            flex-grow: 1;  /* Ensure the nav items take up the remaining space */
         }
 
         /* Section padding and heading styles */
@@ -136,7 +138,7 @@
                 <div class="nav-wrapper">
                     <!-- Logo with Image -->
                     <a href="#home" class="brand-logo">
-                        <img src="/assets/gss.jpg?v=1" alt="Gujarat Spastic Society Logo">  <!-- Added ?v=1 to force reload -->
+                        <img src="/assets/gss.jpg?v=1" alt="Gujarat Spastic Society Logo"> <!-- Added ?v=1 to force reload -->
                         Gujarat Spastic Society
                     </a>
 
