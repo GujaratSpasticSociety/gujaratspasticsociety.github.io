@@ -53,32 +53,31 @@
             z-index: 1000;
         }
 
-        /* Flexbox Layout for Navbar */
+        /* Align the logo */
         .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center; /* Align items vertically centered */
             padding: 0 20px;
+            display: flex;
+            align-items: center; /* Vertically align navbar items */
+            justify-content: space-between;
         }
 
-        /* Logo Styling */
+        /* Brand logo (adjust the height/width if needed) */
+        .brand-logo img {
+            width: 50px; /* Logo size */
+            height: auto;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+
         .brand-logo {
             display: flex;
             align-items: center;
-            justify-content: center; /* Ensure logo and text are aligned */
-        }
-
-        .brand-logo img {
-            width: 50px; /* Adjust logo width */
-            height: auto;
-            object-fit: contain;
-            margin-right: 10px; /* Space between logo and text */
         }
 
         /* Navbar items on the right */
         .nav-wrapper .right {
             display: flex;
-            justify-content: flex-end; /* Align items to the right */
+            justify-content: flex-end;
         }
 
         .nav-wrapper .right li {
