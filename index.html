@@ -34,7 +34,7 @@
 
         /* Navbar styling */
         header, nav {
-            background-color: #7b1fa2 !important;
+            background-color: #7b1fa2 !important; /* Dark Purple */
         }
 
         nav a {
@@ -53,33 +53,34 @@
             display: flex;
             justify-content: space-between; /* Ensures logo and nav items are spaced out */
             align-items: center; /* Vertically center items */
-            height: 80px; /* Set a fixed height for the navbar */
-            padding: 0 20px; /* Padding on left and right */
+            height: 80px; /* Fixed height for navbar */
+            padding: 0 20px; /* Padding for left and right */
         }
 
         /* Brand Logo and Text Styling */
         .brand-logo {
             display: flex;
-            align-items: center; /* Center logo and text vertically */
+            align-items: center; /* Vertically center logo and text */
             font-size: 24px;
+            padding-top: 10px; /* Adjust the vertical positioning */
         }
 
         .brand-logo img {
-            width: 80px; /* Resize the logo */
-            height: auto;
-            margin-right: 10px; /* Space between logo and text */
-            transform: scale(1.2); /* Slight zoom effect */
-            transition: transform 0.3s ease; /* Smooth zoom effect */
+            width: 80px !important; /* Resize the logo */
+            height: auto !important;
+            margin-right: 10px !important; /* Space between logo and text */
+            transform: scale(1.2); /* Zoom effect */
+            transition: transform 0.3s ease !important; /* Smooth zoom effect */
         }
 
         .brand-logo:hover img {
-            transform: scale(1.3); /* Zoom in more on hover */
+            transform: scale(1.3) !important; /* Zoom in more on hover */
         }
 
         /* Navigation links aligned to the right */
         .right {
             display: flex;
-            justify-content: flex-end; /* Push nav items to the right */
+            justify-content: flex-end; /* Align items to the right */
         }
 
         .right li {
@@ -143,7 +144,7 @@
                 <div class="nav-wrapper">
                     <!-- Logo with Image -->
                     <a href="#home" class="brand-logo">
-                        <img src="/assets/gss.jpg?v=1" alt="Gujarat Spastic Society Logo"> <!-- Added ?v=1 to force reload -->
+                        <img src="/assets/gss.jpg?v=1" alt="Gujarat Spastic Society Logo">
                         Gujarat Spastic Society
                     </a>
 
@@ -219,9 +220,9 @@
     <!-- Initialize Materialize Components -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            M.AutoInit();  // Initializes all materialize components (like dropdowns, modals, etc.)
+            M.AutoInit();
         });
     </script>
-
 </body>
+
 </html>
