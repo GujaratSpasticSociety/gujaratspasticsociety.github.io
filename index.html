@@ -41,6 +41,7 @@
             color: white !important;
         }
 
+        /* Navbar fixed position and behavior */
         .navbar-fixed {
             position: fixed;
             top: 0;
@@ -57,35 +58,37 @@
             padding: 0 20px; /* Padding for left and right */
         }
 
-        /* Brand Logo and Text Styling */
+        /* Logo Styling */
         .brand-logo {
             display: flex;
-            align-items: center !important; /* Vertically center logo and text */
+            align-items: center; /* Vertically center logo and text */
             font-size: 24px !important;
-            padding-top: 10px !important; /* Adjust the vertical positioning */
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
+        /* Adjust the logo size and behavior */
         .brand-logo img {
             width: 50px !important; /* Adjust the width of the logo */
-            height: auto !important; /* Maintain the aspect ratio */
-            margin-right: 10px !important; /* Space between logo and text */
-            transform: scale(1.1) !important; /* Zoom effect */
-            transition: transform 0.3s ease !important; /* Smooth zoom effect */
+            height: auto !important; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between logo and text */
+            transform: scale(1.1);
+            transition: transform 0.3s ease; /* Smooth zoom effect */
         }
 
         .brand-logo:hover img {
-            transform: scale(1.2) !important; /* Zoom in more on hover */
+            transform: scale(1.15); /* Slight zoom effect on hover */
         }
 
-        /* Navigation links aligned to the right */
+        /* Navigation items aligned to the right */
         .right {
             display: flex;
-            justify-content: flex-end !important; /* Align items to the right */
-            align-items: center !important;
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center; /* Vertically align items */
         }
 
         .right li {
-            margin-left: 20px !important; /* Space between navigation links */
+            margin-left: 20px; /* Space between items */
         }
 
         /* Section padding and heading styles */
@@ -133,6 +136,7 @@
         .content {
             margin-top: 100px; /* Prevent navbar overlap */
         }
+
     </style>
 </head>
 
