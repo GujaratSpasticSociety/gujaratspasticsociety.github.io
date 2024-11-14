@@ -8,9 +8,12 @@
     <meta name="keywords" content="Gujarat Spastic Society, disabilities, cerebral palsy, rehabilitation, support services">
     <meta property="og:title" content="Gujarat Spastic Society">
     <meta property="og:description" content="We are committed to improving the lives of persons with disabilities and supporting their families.">
-    <meta property="og:image" content="https://example.com/og-image.jpg"> <!-- Add an image for social media sharing -->
+    <meta property="og:image" content="https://example.com/og-image.jpg">
     <meta property="og:url" content="https://www.gujaratspasticsociety.org">
     <title>Gujarat Spastic Society</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Materialize CSS -->
     <link href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css" rel="stylesheet">
@@ -18,27 +21,20 @@
     <!-- Font Awesome for Social Media Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <!-- jQuery and Materialize JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
 
     <style>
-        /* General body styles */
         body {
-            background-color: #7b1fa2; /* Dark Purple Background */
+            background-color: #7b1fa2;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        /* Navbar styling */
-        header {
-            background-color: #7b1fa2 !important; /* Dark Purple for navbar */
-        }
-
-        nav {
-            background-color: #7b1fa2 !important; /* Dark Purple */
+        header, nav {
+            background-color: #7b1fa2 !important;
         }
 
         nav a {
@@ -52,14 +48,16 @@
             z-index: 1000;
         }
 
-        .nav-wrapper {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
         .brand-logo {
             font-size: 24px;
-            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo img {
+            width: 80px; /* Resize the logo */
+            height: auto;
+            margin-right: 10px; /* Space between logo and text */
         }
 
         .right {
@@ -67,11 +65,6 @@
             justify-content: flex-end;
         }
 
-        .right li {
-            margin-left: 20px;
-        }
-
-        /* Section padding and heading styles */
         .section {
             padding: 60px 20px;
         }
@@ -84,18 +77,11 @@
             margin-bottom: 20px;
         }
 
-        .flow-text {
-            text-align: center;
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
         .container {
             padding-left: 20px;
             padding-right: 20px;
         }
 
-        /* Social Media Icons */
         .social-icons a {
             margin: 10px;
             font-size: 30px;
@@ -111,32 +97,12 @@
             color: white;
         }
 
-        footer p {
-            color: white;
-        }
-
-        .center-align {
-            text-align: center !important;
-        }
-
-        /* Adjust content below navbar */
         .content {
-            margin-top: 100px; /* Prevent navbar overlap */
-        }
-
-        /* Smooth scrolling styles */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Styling for Program Section */
-        .programs-list {
-            list-style-type: none;
-            padding-left: 0;
+            margin-top: 100px;
         }
 
         .programs-list li {
-            background-color: #9c4dcc; /* Light Purple */
+            background-color: #9c4dcc;
             padding: 15px;
             margin: 10px 0;
             border-radius: 4px;
@@ -145,22 +111,28 @@
         }
 
         .programs-list li:hover {
-            background-color: #7b1fa2; /* Darker Purple on Hover */
+            background-color: #7b1fa2;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s ease;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
     <header>
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
-                    <!-- Logo on the left -->
-                    <a href="#home" class="brand-logo">Gujarat Spastic Society</a>
-
-                    <!-- Navigation Links on the right -->
+                    <!-- Logo with Image -->
+                    <a href="#home" class="brand-logo">
+                        <img src="assets/gss.jpg" alt="Gujarat Spastic Society Logo">
+                        Gujarat Spastic Society
+                    </a>
+                    <!-- Navigation Links -->
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about-us">About Us</a></li>
