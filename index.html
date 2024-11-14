@@ -1,149 +1,240 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranjani Sastry | Counselor</title>
-    <!-- External Fonts -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Gujarat Spastic Society - Supporting persons with disabilities and their families.">
+    <meta name="keywords" content="Gujarat Spastic Society, disabilities, cerebral palsy, rehabilitation, support services">
+    <meta property="og:title" content="Gujarat Spastic Society">
+    <meta property="og:description" content="We are committed to improving the lives of persons with disabilities and supporting their families.">
+    <meta property="og:image" content="https://example.com/og-image.jpg"> <!-- Add an image for social media sharing -->
+    <meta property="og:url" content="https://www.gujaratspasticsociety.org">
+    <title>Gujarat Spastic Society</title>
+
     <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Social Media Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- jQuery and Materialize JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
+
     <style>
-        body, html {
+        /* General body styles */
+        body {
+            background-color: #7b1fa2; /* Dark Purple Background */
+            color: white;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f0f0; /* Default background color */
-            transition: background-color 0.5s ease; /* Transition effect */
         }
 
-        #wrapper {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        /* Navbar styling */
+        header {
+            background-color: #7b1fa2 !important; /* Dark Purple for navbar */
         }
 
-        #main {
-            flex-grow: 1;
-            text-align: center;
-            padding: 20px;
+        nav {
+            background-color: #7b1fa2 !important; /* Dark Purple */
         }
 
-        .social-icons {
-            margin-top: 20px;
+        nav a {
+            color: white !important;
+        }
+
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .brand-logo {
             font-size: 24px;
-        }
-
-        .social-icons a {
-            margin-right: 10px;
-            color: #333; /* Dark Grey Color */
-        }
-
-        #footer {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #footer .copyright {
-            list-style: none;
             margin: 0;
-            padding: 0;
         }
 
-        #footer .copyright li {
-            display: inline;
-            margin-right: 10px;
+        .right {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .right li {
+            margin-left: 20px;
+        }
+
+        /* Section padding and heading styles */
+        .section {
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .flow-text {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Social Media Icons */
+        .social-icons a {
+            margin: 10px;
+            font-size: 30px;
+            color: white;
+        }
+
+        .social-icons a:hover {
+            color: #ff80ab;
+        }
+
+        footer {
+            background-color: #7b1fa2 !important;
+            color: white;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        .center-align {
+            text-align: center !important;
+        }
+
+        /* Adjust content below navbar */
+        .content {
+            margin-top: 100px; /* Prevent navbar overlap */
+        }
+
+        /* Smooth scrolling styles */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styling for Program Section */
+        .programs-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .programs-list li {
+            background-color: #9c4dcc; /* Light Purple */
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .programs-list li:hover {
+            background-color: #7b1fa2; /* Darker Purple on Hover */
         }
     </style>
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Ranjani Sastry",
-          "jobTitle": "School Counselor",
-          "description": "Experienced school counselor providing counseling services to students.",
-          "url": "https://www.example.com/",
-          "image": "https://www.example.com/images/me.jpg",
-          "email": "mailto:ranjanisastry@gmail.com",
-          "telephone": "+1234567890",
-          "sameAs": [
-            "https://twitter.com/ranjanisastry",
-            "https://www.linkedin.com/in/ranjanisastry",
-            "https://www.facebook.com/ranjanisastry"
-          ]
-        }
-    </script>
 </head>
-<body class="is-preload">
-    <div id="wrapper">
-        <!-- Home Section -->
-        <div id="main">
-            <article id="home" class="panel intro">
-                <header>
-                    <h1>Ranjani Sastry</h1>
-                    <p>School Counselor</p>
-                </header>
-            </article>
 
-            <!-- Services Section -->
-            <article class="panel">
-                <header>
-                    <h2>Services</h2>
-                </header>
-                <p>Currently, I am providing the following services:</p>
-                <section>
-                    <div class="row">
-                        <div class="col s6 m6 l6">
-                            <div class="card-panel teal">
-                                <span class="white-text">Service 1</span>
-                            </div>
-                        </div>
-                        <div class="col s6 m6 l6">
-                            <div class="card-panel teal">
-                                <span class="white-text">Service 2</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </article>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <!-- Logo on the left -->
+                    <a href="#home" class="brand-logo">Gujarat Spastic Society</a>
+
+                    <!-- Navigation Links on the right -->
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#services">Programs & Services</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <ul class="copyright">
-                <li>&copy; Ranjani Sastry</li>
+    <!-- Main Content Sections -->
+    <section id="home" class="section content">
+        <div class="container">
+            <h2>Welcome to Gujarat Spastic Society</h2>
+            <p class="flow-text">We are committed to improving the lives of persons with disabilities and supporting their families. Explore our programs, services, and resources to learn more about our mission.</p>
+        </div>
+    </section>
+
+    <section id="about-us" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>The Gujarat Spastic Society was established in 1988 with the mission of helping children and adults with disabilities, primarily focusing on individuals with cerebral palsy and related disabilities. Our goal is to promote inclusivity and provide families with the tools and support they need.</p>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Programs & Services</h2>
+            <ul class="programs-list">
+                <li>Specialized Rehabilitation Services</li>
+                <li>Inclusive Education & Vocational Training</li>
+                <li>Support Groups for Parents & Caregivers</li>
+                <li>Awareness and Advocacy Programs</li>
+                <li>Physiotherapy and Speech Therapy</li>
             </ul>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-media" class="section">
+        <div class="container center-align">
+            <h2>Follow Us</h2>
+            <p>Stay connected with us on social media to stay updated on our activities and events!</p>
             <div class="social-icons">
-                <a href="https://twitter.com/ranjanisastry" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/ranjanisastry" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/ranjanisastry" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Follow us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Follow us on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="Follow us on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
 
-    <!-- Background Audio -->
-    <audio autoplay loop>
-        <source src="your-audio-file.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container center-align">
+            <p>&copy; 2024 Gujarat Spastic Society. All rights reserved.</p>
+            <p><a href="privacy-policy.html" class="white-text">Privacy Policy</a> | <a href="terms-conditions.html" class="white-text">Terms & Conditions</a></p>
+        </div>
+    </footer>
 
-    <!-- Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- JavaScript -->
+    <!-- Initialize Materialize Components -->
     <script>
-        // Change background color on page load
-        window.onload = function() {
-            var colors = ["#f0f0f0", "#e6e6e6", "#cccccc"]; // Array of background colors
-            var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Select a random color
-            document.body.style.backgroundColor = randomColor; // Apply the random color to the body background
-        };
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();  // Initializes all materialize components (like dropdowns, modals, etc.)
+        });
     </script>
 </body>
+
 </html>
