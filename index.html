@@ -52,29 +52,35 @@
             z-index: 1000;
         }
 
+        /* Flexbox Layout for Navbar */
         .nav-wrapper {
             display: flex;
-            justify-content: space-between; /* Space between logo and navbar links */
-            align-items: center; /* Center vertically */
-            padding: 0 20px; /* Space around the navbar */
+            justify-content: space-between;
+            align-items: center; /* Vertically center the content */
+            padding: 0 20px; /* Add padding */
         }
 
-        /* Logo Styling */
+        /* Styling for the Logo */
+        .brand-logo {
+            display: flex;
+            align-items: center;
+        }
+
         .brand-logo img {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            margin-right: 10px;
+            width: 50px; /* Set logo size */
+            height: auto;
+            object-fit: contain;
+            margin-right: 10px; /* Space between logo and text */
         }
 
-        /* Navbar links align to right */
+        /* Navbar Links aligned to the right */
         .nav-wrapper .right {
             display: flex;
             justify-content: flex-end; /* Align items to the right */
         }
 
         .nav-wrapper .right li {
-            margin-left: 20px; /* Add spacing between items */
+            margin-left: 20px; /* Add space between items */
         }
 
         /* Section Padding and Heading Styles */
@@ -207,7 +213,7 @@
     <!-- Initialize Materialize Components -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            M.AutoInit();
+            M.AutoInit();  // Initializes all materialize components (like dropdowns, modals, etc.)
         });
     </script>
 </body>
