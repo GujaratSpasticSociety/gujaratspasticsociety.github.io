@@ -48,19 +48,20 @@
             z-index: 1000;
         }
 
+        /* Adjusting nav-wrapper to make logo and nav items align */
         .nav-wrapper {
             display: flex;
-            justify-content: space-between; /* Ensure space between logo and nav items */
-            align-items: center; /* Vertically center content */
-            padding: 0 20px; /* Add padding to avoid sticking to edges */
+            justify-content: space-between; /* Ensures logo and nav items are spaced out */
+            align-items: center; /* Vertically center items */
+            height: 80px; /* Set a fixed height for the navbar */
+            padding: 0 20px; /* Padding on left and right */
         }
 
         /* Brand Logo and Text Styling */
         .brand-logo {
             display: flex;
-            align-items: center;  /* Center logo and text vertically */
+            align-items: center; /* Center logo and text vertically */
             font-size: 24px;
-            flex-grow: 0;  /* Ensure the logo doesn't take up extra space */
         }
 
         .brand-logo img {
@@ -75,10 +76,14 @@
             transform: scale(1.3); /* Zoom in more on hover */
         }
 
+        /* Navigation links aligned to the right */
         .right {
             display: flex;
             justify-content: flex-end; /* Push nav items to the right */
-            flex-grow: 1;  /* Ensure the nav items take up the remaining space */
+        }
+
+        .right li {
+            margin-left: 20px; /* Space between navigation links */
         }
 
         /* Section padding and heading styles */
