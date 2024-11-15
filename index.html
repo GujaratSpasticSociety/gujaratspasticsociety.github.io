@@ -37,33 +37,33 @@
             z-index: 1000;
         }
 
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center items */
+            height: 64px; /* Set height for navbar */
+            padding: 0 20px;
+        }
+
         .brand-logo {
             display: flex;
             align-items: center;
         }
 
         .brand-logo img {
-            width: 80px; /* Adjust logo size */
+            width: 80px; /* Set logo width */
             height: auto;
             margin-right: 10px;
             transition: none; /* Remove hover effect */
         }
 
-        .nav-wrapper {
-            padding-left: 20px;
-            padding-right: 20px;
-            height: 64px; /* Ensure navbar has enough height */
-            display: flex;
-            justify-content: space-between;
-            align-items: center; /* Center logo and nav links vertically */
-        }
-
         nav {
-            background-color: #3c2a98;
+            background-color: #3c2a98; /* Purple background */
         }
 
         nav a {
             color: white !important; /* Ensure links are white */
+            font-size: 16px;
         }
 
         nav a:hover {
@@ -104,15 +104,15 @@
 
         /* Collection (Program Section) Styling */
         .collection-item {
-            background-color: #3c2a98; /* Purple collection items */
+            background-color: #3c2a98; /* Purple background */
             color: white;
             border: none;
         }
 
         /* Remove hover effect from collection items */
         .collection-item:hover {
-            background-color: #3c2a98;
-            color: white; /* Ensure the text remains white on hover */
+            background-color: #3c2a98; /* Keep purple background */
+            color: white; /* Keep text color white */
         }
 
         /* Social Media Icons Styling */
