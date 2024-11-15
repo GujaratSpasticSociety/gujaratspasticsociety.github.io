@@ -237,36 +237,76 @@
         </div>
     </section>
 
-    <!-- Social Media Icons Section -->
-   <section class="social-icons">
-    <a href="fb://profile/gujaratspasticsociety" target="_blank" title="Follow us on Facebook">
+    
+  <!-- Social Media Icons Section -->
+<section class="social-icons">
+    <a href="javascript:void(0);" class="social-link" data-platform="facebook" title="Follow us on Facebook">
         <i class="fab fa-facebook-f"></i>
     </a>
-    <a href="https://www.facebook.com/gujaratspasticsociety" target="_blank" style="display: none;" title="Follow us on Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a href="twitter://user?screen_name=gssgujarat" target="_blank" title="Follow us on Twitter">
+    
+    <a href="javascript:void(0);" class="social-link" data-platform="twitter" title="Follow us on Twitter">
         <i class="fab fa-twitter"></i>
     </a>
-    <a href="https://twitter.com/gssgujarat" target="_blank" style="display: none;" title="Follow us on Twitter">
-        <i class="fab fa-twitter"></i>
-    </a>
-
-    <a href="instagram://user?username=gssgujarat" target="_blank" title="Follow us on Instagram">
+    
+    <a href="javascript:void(0);" class="social-link" data-platform="instagram" title="Follow us on Instagram">
         <i class="fab fa-instagram"></i>
     </a>
-    <a href="https://www.instagram.com/gssgujarat/" target="_blank" style="display: none;" title="Follow us on Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="linkedin://company/gssgujarat" target="_blank" title="Follow us on LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://in.linkedin.com/company/gssgujarat" target="_blank" style="display: none;" title="Follow us on LinkedIn">
+    
+    <a href="javascript:void(0);" class="social-link" data-platform="linkedin" title="Follow us on LinkedIn">
         <i class="fab fa-linkedin-in"></i>
     </a>
 </section>
+
+<!-- JavaScript to Detect Device and Handle Social Links -->
+<script>
+    // Function to check if the device is mobile
+    function isMobileDevice() {
+        return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    }
+
+    // Social Media Link Handling
+    document.querySelectorAll('.social-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var platform = this.getAttribute('data-platform');
+            var url = '';
+            var appUrl = '';
+            
+            // Set platform-specific URLs
+            switch (platform) {
+                case 'facebook':
+                    url = 'https://www.facebook.com/gujaratspasticsociety';
+                    appUrl = 'fb://profile/gujaratspasticsociety';
+                    break;
+                case 'twitter':
+                    url = 'https://twitter.com/gssgujarat';
+                    appUrl = 'twitter://user?screen_name=gssgujarat';
+                    break;
+                case 'instagram':
+                    url = 'https://www.instagram.com/gssgujarat/';
+                    appUrl = 'instagram://user?username=gssgujarat';
+                    break;
+                case 'linkedin':
+                    url = 'https://in.linkedin.com/company/gssgujarat';
+                    appUrl = 'linkedin://company/gssgujarat';
+                    break;
+            }
+
+            // If mobile, attempt to open app first, else open in browser
+            if (isMobileDevice()) {
+                // Attempt to open the app using deep linking
+                window.location.href = appUrl;
+
+                // Fallback to browser link if app is not installed (timeout to give app time to open)
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 1000);
+            } else {
+                // On desktop, open in browser
+                window.open(url, '_blank');
+            }
+        });
+    });
+</script>
 
     <!-- Footer -->
     <footer>
