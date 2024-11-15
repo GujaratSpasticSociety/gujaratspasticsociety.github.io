@@ -37,16 +37,25 @@
             z-index: 1000;
         }
 
+        .brand-logo {
+            display: flex;
+            align-items: center;
+        }
+
         .brand-logo img {
-            width: 80px; /* Increased logo size */
+            width: 80px; /* Adjust logo size */
             height: auto;
             margin-right: 10px;
-            transition: none; /* Remove any transition on hover */
+            transition: none; /* Remove hover effect */
         }
 
         .nav-wrapper {
             padding-left: 20px;
             padding-right: 20px;
+            height: 64px; /* Ensure navbar has enough height */
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Center logo and nav links vertically */
         }
 
         nav {
@@ -121,6 +130,11 @@
             border-radius: 50%;
             background-color: #3c2a98;
             transition: none; /* Remove hover effect */
+        }
+
+        .social-icons a:hover {
+            background-color: white;
+            color: #3c2a98;
         }
 
         /* Buttons */
